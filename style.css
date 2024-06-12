@@ -159,9 +159,9 @@ section{
 
 
 .flaptofreedom {
-    flex: 0 0 auto;     /* Prevent projects from shrinking */
+    flex: 0 0 auto;  
     width: 300px; 
-    height: 300px;      /* Set a fixed width for each project */
+    height: 300px;      
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -185,6 +185,35 @@ section{
 	text-align: center;
 }
 
+.skyblaster {
+	flex: 0 0 auto;     
+    width: 300px; 
+    height: 300px;      
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.3s;
+}
+
+.skyblaster a{
+	text-decoration: none;
+}
+
+.skyblaster img{
+	margin: 0px;
+	padding: 0px;
+	height: 270px;
+	width: 300px;
+}
+
+.skyblaster h3{
+	color: yellow;
+	margin-top: 0px;
+	padding: 0px;
+	height: 5%;
+	text-align: center;
+}
 
 
 form{
