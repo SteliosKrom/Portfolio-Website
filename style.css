@@ -285,4 +285,28 @@ button:hover{
 		width: 100%;
 		height: auto;
 	}
+
+	form {
+		width: 90%; /* Make form responsive */
+	}
+
+	.form-group {
+		margin-bottom: 1em;
+	}
+
+	label {
+		font-size: 14px; /* Adjust label size */
+	}
+
+	input, textarea {
+		font-size: 14px; /* Adjust input size */
+	}
+
+	button {
+		width: 100%; /* Make button full-width */
+	}
+
+	.section2 p, .section3 p {
+		font-size: 14px; /* Adjust font size for section descriptions */
+		padding: 0 20px; /* Add padding for readability */
 }
