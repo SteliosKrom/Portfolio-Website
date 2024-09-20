@@ -246,35 +246,43 @@ button:hover{
 	background-color: #0056b3;
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
 	h1 {
-		font-size: 32px;
+		font-size: 30px;
 		margin-top: 0;
 	}
 
 	h2 {
-		font-size: 36px;
-		margin-top: 50px;
+		font-size: 35px;
+		margin-top: 20px;
 	}
 
 	p {
 		font-size: 14px;
 	}
 
-	section {
-		padding: 100px 20px;
+	section1, section2, section3, section4 {
+		padding: 50px 20px;
+		margin: 0;
 	}
 
 	.navbar li {
-		font-size: 16px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.projects-grid {
-		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.crateninja, .flaptofreedom, .skyblaster {
-		width: 90%;
-		margin: 0 auto 30px;
+		width: 100%;
+		height: auto;
 	}
 }
