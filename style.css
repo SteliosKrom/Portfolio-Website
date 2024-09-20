@@ -262,7 +262,7 @@ button:hover{
 	}
 
 	section1, section2, section3, section4 {
-		padding: 50px 20px;
+		padding: 50px 10px;
 		margin: 0;
 	}
 
@@ -284,6 +284,7 @@ button:hover{
 	.crateninja, .flaptofreedom, .skyblaster {
 		width: 100%;
 		height: auto;
+		padding: 10px;
 	}
 
 	form {
@@ -309,4 +310,5 @@ button:hover{
 	.section2 p, .section3 p {
 		font-size: 14px; /* Adjust font size for section descriptions */
 		padding: 0 20px; /* Add padding for readability */
+		margin: 0;
 }
