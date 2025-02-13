@@ -1,252 +1,294 @@
-html{
-	scroll-behavior: smooth;
-}
-body{
-	margin: 0;
-	padding: 0;
-	background-image: url("Background9.jpg");
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	font-family: Verdana, sans-serif;
-}
-h1{
-	text-align: center;
-	font-size: 45px;
-	color: brown;
-	margin-top: -100px;
-	width: 100%;
-}
-h2{
-	text-align: center;
-	font-size: 50px;
-	color: white;
-	margin-top: 150px;
-}
-p{
-	text-align: center;
-	font-size: 17px;
-	color: white;	
+html {
+  scroll-behavior: smooth;
 }
 
-
-
-.social_links{
-	display: flex;
-	justify-content: flex-end;
-}
-.social_links a{
-	height: 60px;
-	width: 60px;
-	margin: 0 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	background-color: black;
-	border-radius: 50%;
-	transition: none;
-}
-.social_links i{
-	font-size: 30px;
-	color: rgb(77, 113, 119);
-	transition: transform 1s;
-}
-.social_links a:hover{
-	box-shadow: inset 6px 6px 8px -2px rgb(168, 179, 172), inset -6px -6px 8px -2px rgb(193, 211, 214), 0px 12px 10px -10px rgb(124, 146, 143);
-	transform: translateY(3px);
-}
-.social_links i:hover{
-	transform: scale(0.85);
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("Background9.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: white;
 }
 
-
-section{
-	padding: 300px 20px;
-	margin: 0;
-}
-.section1{
-	height: 100%;
-}
-.section2, .section3, .section4 {
-	padding: 200px 20px;
-	margin: 100px 0;
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #ff6347;
+  margin-top: 50px;
+  font-weight: bold;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
 }
 
-
-.navbar{
-	margin-block: 20px;
-	width: 100%;
-	background-color: grey;
-	overflow: hidden;
-	z-index: 1000;
-}
-.navbar ul{
-	list-style-type: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-	align-items: center;
-	justify-content: flex-start;
-}
-.navbar li{
-	float: left;
-	height: 53px;
-	font-size: 20px;
-}
-.navbar a{
-	height: 100%;
-	display: block;
-	text-decoration: none;
-	color: white;
-	text-align: center;
-	align-items: center;
-	padding: 15px;
-}
-.navbar a:hover{
-	background-color: darkred;
+h2 {
+  text-align: center;
+  font-size: 44px;
+  color: white;
+  margin-top: 80px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-
-.projects-grid{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;  /* Ensure projects stay in a single row */
-    overflow-x: auto;   /* Allow horizontal scrolling if needed */
-    padding: 50px 0;    /* Add some padding for better spacing */
+p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #f1f1f1;
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: none; /* Removed the black background */
 }
 
-
-.crateninja, .flaptofreedom, .skyblaster{
-    flex: 0 0 auto;
-    width: 100%; 
-    max-width: 300px;
-    height: 100%;      
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #000000;
-    transition: transform 0.3s;
-}
-.crateninja h3, .flaptofreedom h3, .skyblaster h3{
-	color: yellow;
-	font-family: cursive;
-	font-size: 150%;
-	margin-top: 0px;
-	margin-bottom: 5px;
-	height: 20%;
-	text-align: center;
+.social_links {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
 
-.crateninja img, .flaptofreedom img, .skyblaster img{
-	margin: 0px;
-	margin-bottom: -5px;
-	height: 250px;
-	width: 100%;
+.social_links a {
+  height: 60px;
+  width: 60px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #222;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.crateninja a, .flaptofreedom a, .skyblaster a{
-	text-decoration: none;
+.social_links i {
+  font-size: 30px;
+  color: #4d7177;
+  transition: transform 0.3s;
 }
 
-
-form{
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 1em;
-	background: #f9f9f9;
-	border-radius: 5px;
-}
-.form-group{
-	margin-bottom: 1em;
-}
-label{
-	display: block;
-	margin-bottom: .5em;
-}
-input, textarea{
-	border: 1px solid #ccc;
-	padding: .5em;
-	font-size: 1em;
-	width: 100%;
-	box-sizing: border-box;
-}
-button{
-	padding: 0.7em;
-	color: #fff;
-	background-color: #007BFF;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-button:hover{
-	background-color: #0056b3;
+.social_links a:hover {
+  background: #ff6347;
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 99, 71, 1), 0 0 35px rgba(255, 99, 71, 0.7); /* Glowing effect */
 }
 
-@media (max-width: 768px){
-	h1{
-		font-size: 30px;
-		margin-top: 0;
-	}
+.social_links i:hover {
+  transform: scale(1.2);
+}
 
-	h2{
-		font-size: 35px;
-		margin-top: 20px;
-	}
+section {
+  padding: 150px 20px;
+  margin: 0;
+}
 
-	p{
-		font-size: 14px;
-	}
+.navbar {
+  width: 100%;
+  background: rgba(51, 51, 51, 0.85);
+  position: relative;
+  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 
-	section{
-		padding: 50px 10px;
-		margin: 0;
-	}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
 
-	.navbar li{
-		width: 100%;
-		text-align: center;
-	}
+.navbar li {
+  padding: 12px 20px;
+}
 
-	.navbar ul{
-		flex-direction: column;
-		align-items: center;
-	}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+}
 
-	.projects-grid{
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+.navbar a:hover {
+  color: #ff6347;
+  text-shadow: 0 0 25px rgba(255, 99, 71, 0.9), 0 0 35px rgba(255, 99, 71, 0.8); /* Enhanced glowing effect */
+  transform: scale(1.1); /* Slight scaling to create the pulse effect */
+}
 
-	.crateninja, .flaptofreedom, .skyblaster{
-		width: 100%;
-		height: auto;
-		padding: 10px;
-	}
+/* Glowing underline effect with pulse */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ff6347;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
 
-	form{
-		width: 90%; /* Make form responsive */
-	}
+.navbar a:hover::after {
+  transform: scaleX(1); /* Underline grows */
+  animation: pulse 1s infinite; /* Pulse animation */
+}
 
-	.form-group{
-		margin-bottom: 1em;
-	}
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.7);
+  }
+  50% {
+    transform: scaleX(1.05);
+    box-shadow: 0 0 15px rgba(255, 99, 71, 1), 0 0 25px rgba(255, 99, 71, 0.8);
+  }
+  100% {
+    transform: scaleX(1);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.7);
+  }
+}
 
-	label{
-		font-size: 14px; /* Adjust label size */
-	}
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 60px 0;
+}
 
-	input, textarea{
-		font-size: 14px; /* Adjust input size */
-	}
+.crateninja, .flaptofreedom, .skyblaster {
+  flex: 0 0 auto;
+  max-width: 320px;
+  border-radius: 15px;
+  background: #1a1a1a;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
 
-	button{
-		width: 100%; /* Make button full-width */
-	}
+.crateninja:hover, .flaptofreedom:hover, .skyblaster:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 99, 71, 1), 0 0 35px rgba(255, 99, 71, 0.7); /* Glowing effect */
+}
 
-	.section2 p, .section3 p{
-		font-size: 14px; /* Adjust font size for section descriptions */
-		padding: 0 20px; /* Add padding for readability */
-		margin: 0;
+.crateninja h3, .flaptofreedom h3, .skyblaster h3 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+  text-decoration: none; /* Ensures no underline for the titles */
+}
+
+.crateninja a, .flaptofreedom a, .skyblaster a {
+  text-decoration: none; /* Ensures no underline for links */
+}
+
+/* Add image hover effect for projects */
+.crateninja img,
+.flaptofreedom img,
+.skyblaster img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crateninja:hover img,
+.flaptofreedom:hover img,
+.skyblaster:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 0 15px rgba(255, 99, 71, 1), 0 0 20px rgba(255, 99, 71, 0.8); /* Glowing effect */
+}
+
+/* --- Updated Contact Form Styles --- */
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+form h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff6347;
+}
+
+input, 
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: #ccc;
+}
+
+input:focus, 
+textarea:focus {
+  outline: none;
+  border-color: #ff6347;
+  box-shadow: 0 0 8px rgba(255, 99, 71, 0.6);
+}
+
+button {
+  padding: 15px;
+  background: #ff6347;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #e5533c;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-top: 50px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .projects-grid {
+    flex-direction: column;
+  }
+  .crateninja, .flaptofreedom, .skyblaster {
+    max-width: 90%;
+    margin: auto;
+  }
+  form {
+    width: 90%;
+  }
+  button {
+    width: 100%;
+  }
 }
