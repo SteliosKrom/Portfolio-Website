@@ -3,104 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>The Legend Knight Games Portfolio</title>
-    <script src="https://kit.fontawesome.com/6ee80224ef.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <meta name="description" content="TLK Games – Indie game development and publishing studio creating immersive Unity experiences.">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6ee80224ef.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <img src="New Indie Game Studio Logo No Background.png" width="300" height="180"  alt="My Latest Photo">
-    <h1>TLK GAMES<br><p>Game Development & Publishing Team</p></h1><br>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
+    <!-- HOME / HERO -->
     <section id="home" class="section1">
-        <h2>WELCOME TO MY TLK GAMES!</h2>
-        <p>Discover my projects, skills, and experience as a developer—sometimes working solo, other times collaborating with talented partners. As a team, we strive to create immersive experiences that are fun, engaging, and memorable, pushing the boundaries of game development.</p>
+        <img 
+            src="New Indie Game Studio Logo No Background.png" 
+            alt="TLK Games studio logo"
+            width="300"
+            height="180"
+            loading="lazy"
+        >
+
+        <h1>TLK GAMES</h1>
+        <p class="subtitle">Game Development & Publishing Team</p>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h2>WELCOME TO TLK GAMES!</h2>
+        <p>
+            Discover my projects, skills, and experience as a developer—sometimes working solo, 
+            other times collaborating with talented partners. As a team, we strive to create immersive 
+            experiences that are fun, engaging, and memorable, pushing the boundaries of game development.
+        </p>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section2">
         <h2>ABOUT ME</h2>
-        <p>Hi, I’m Stelios, owner, developer, and publisher of TLK Games, based in Athens, Greece. With several years of experience working in Unity and C#, I’m passionate about turning ideas into immersive gaming experiences. My love for video games started in childhood, and today, I’m dedicated to bringing that passion to life through game development. Driven by clear goals and creativity, I’m excited to continue growing and creating within this dynamic industry.</p>
+        <p>
+            Hi, I’m Stelios, owner, developer, and publisher of TLK Games, based in Athens, Greece. 
+            With several years of experience working in Unity and C#, I’m passionate about turning ideas 
+            into immersive gaming experiences. My love for video games started in childhood, and today, 
+            I’m dedicated to bringing that passion to life through game development. Driven by clear goals 
+            and creativity, I’m excited to continue growing and creating within this dynamic industry.
+        </p>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section3">
         <h2>MY PROJECTS</h2>
-        <p>Welcome to my project showcase—explore the games and experiences I’ve brought to life using Unity, each reflecting my passion and dedication to game development.</p>
+        <p>
+            Welcome to my project showcase—explore the games and experiences I’ve brought to life using Unity, 
+            each reflecting my passion and dedication to game development.
+        </p>
+
         <div class="projects-grid">
+
             <div class="crateninja">
-                <a href="https://thelegendknightgames.itch.io/crate-ninja">
+                <a href="https://thelegendknightgames.itch.io/crate-ninja" target="_blank" rel="noopener noreferrer">
                     <h3>Crate Ninja</h3>
-                    <img src="CrateNinja.jpg" alt="Crate Ninja">
+                    <img 
+                        src="CrateNinja.jpg" 
+                        alt="Crate Ninja game screenshot"
+                        loading="lazy"
+                    >
                 </a>
             </div>
+
             <div class="flaptofreedom">
-                <a href="https://thelegendknightgames.itch.io/flap-to-freedom">
+                <a href="https://thelegendknightgames.itch.io/flap-to-freedom" target="_blank" rel="noopener noreferrer">
                     <h3>Flap To Freedom</h3>
-                    <img src="FlapToFreedom.jpg" width="300px" height="300px" alt="Flap To Freedom">
+                    <img 
+                        src="FlapToFreedom.jpg" 
+                        alt="Flap To Freedom game screenshot"
+                        loading="lazy"
+                    >
                 </a>
             </div>
+
             <div class="skyblaster">
-                <a href="https://thelegendknightgames.itch.io/sky-blaster">
+                <a href="https://thelegendknightgames.itch.io/sky-blaster" target="_blank" rel="noopener noreferrer">
                     <h3>Sky Blaster</h3>
-                    <img src="Sky Blaster.jpg" alt="Sky Blaster">
+                    <img 
+                        src="Sky Blaster.jpg" 
+                        alt="Sky Blaster game screenshot"
+                        loading="lazy"
+                    >
                 </a>
             </div>
+
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section4">
         <h2>CONTACT ME</h2>
+
         <form id="contact-form">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
-            <br>
+
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            <br>
+
             <div class="form-group">
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
             </div>
-            <br>
-            <button type="button" id="send-button">Send</button> <!-- Updated button type -->
+
+            <!-- Keep ID for JS compatibility -->
+            <button type="submit" id="send-button">Send</button>
         </form>
     </section>
 
+    <!-- SOCIAL LINKS -->
     <div class="social_links">
-        <a href="https://www.tiktok.com/@thelegendknightgames" target="_blank">
+        <a href="https://www.tiktok.com/@thelegendknightgames" target="_blank" rel="noopener noreferrer" aria-label="TLK Games on TikTok">
             <i class="fa-brands fa-tiktok"></i>
         </a>
-        <a href="https://www.youtube.com/@TheLegendKnightGames" target="_blank">
+        <a href="https://www.youtube.com/@TheLegendKnightGames" target="_blank" rel="noopener noreferrer" aria-label="TLK Games on YouTube">
             <i class="fa-brands fa-youtube"></i>
         </a>
-        <a href="https://x.com/TheLegendKGames" target="_blank">
+        <a href="https://x.com/TheLegendKGames" target="_blank" rel="noopener noreferrer" aria-label="TLK Games on Twitter">
             <i class="fa-brands fa-twitter"></i>
         </a>
-        <a href="https://www.linkedin.com/in/stelios-kromlidis-465b66283/" target="_blank">
+        <a href="https://www.linkedin.com/in/stelios-kromlidis-465b66283/" target="_blank" rel="noopener noreferrer" aria-label="Stelios on LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com/tlk_games/" target="_blank">
+        <a href="https://www.instagram.com/tlk_games/" target="_blank" rel="noopener noreferrer" aria-label="TLK Games on Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
     </div>
-    <div style="height: 10px;"></div>
 
     <footer class="trademark">
-        <p>All other trademarks are the property of their respective owners. © 2025 TLK GAMES™. All rights reserved.</p>
+        <p>
+            All other trademarks are the property of their respective owners. 
+            © 2025 TLK GAMES™. All rights reserved.
+        </p>
     </footer>
 
-    <script src="script.js"></script> <!-- Linking the JS file -->
+    <script src="script.js"></script>
 </body>
 </html>
-

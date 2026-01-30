@@ -1,3 +1,8 @@
+/* ---------------- GLOBAL ---------------- */
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,6 +18,7 @@ body {
   color: white;
 }
 
+/* ---------------- HEADINGS ---------------- */
 h1 {
   text-align: center;
   font-size: 60px;
@@ -31,60 +37,26 @@ h2 {
   letter-spacing: 2px;
 }
 
+/* ---------------- TEXT ---------------- */
 p {
   text-align: center;
   font-size: 20px;
   line-height: 1.8;
   color: #f1f1f1;
-  max-width: 80%;
+  max-width: 900px;
   margin: 30px auto;
   padding: 20px;
   border-radius: 10px;
-  background: none; /* Removed the black background */
+  background: none;
 }
 
-.social_links {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-}
-
-.social_links a {
-  height: 60px;
-  width: 60px;
-  margin: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  background-color: #222;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.social_links i {
-  font-size: 30px;
-  color: #4d7177;
-  transition: transform 0.3s;
-}
-
-.social_links a:hover {
-  background: #ff6347;
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 99, 71, 1), 0 0 35px rgba(255, 99, 71, 0.7); /* Glowing effect */
-}
-
-.social_links i:hover {
-  transform: scale(1.2);
-}
-
-/* Moved all sections further down by increasing the top margin to 100px */
+/* ---------------- SECTIONS ---------------- */
 section {
-  padding: 150px 20px;
-  margin-top: 100px;
+  padding: 120px 20px;
+  margin-top: 80px;
 }
 
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   width: 100%;
   background: rgba(51, 51, 51, 0.85);
@@ -108,20 +80,23 @@ section {
 }
 
 .navbar a {
+  display: inline-block;
   text-decoration: none;
   color: white;
   font-size: 20px;
   position: relative;
   transition: all 0.4s ease;
+  will-change: transform, box-shadow;
 }
 
 .navbar a:hover {
   color: #ff6347;
-  text-shadow: 0 0 25px rgba(255, 99, 71, 0.9), 0 0 35px rgba(255, 99, 71, 0.8); /* Enhanced glowing effect */
-  transform: scale(1.1); /* Slight scaling to create the pulse effect */
+  text-shadow: 0 0 25px rgba(255, 99, 71, 0.9),
+               0 0 35px rgba(255, 99, 71, 0.8);
+  transform: scale(1.1);
 }
 
-/* Glowing underline effect with pulse */
+/* Glowing underline */
 .navbar a::after {
   content: "";
   position: absolute;
@@ -135,25 +110,65 @@ section {
 }
 
 .navbar a:hover::after {
-  transform: scaleX(1); /* Underline grows */
-  animation: pulse 1s infinite; /* Pulse animation */
+  transform: scaleX(1);
+  animation: pulse 1s infinite;
 }
 
 @keyframes pulse {
   0% {
-    transform: scaleX(1);
-    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.7);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8),
+                0 0 20px rgba(255, 99, 71, 0.7);
   }
   50% {
-    transform: scaleX(1.05);
-    box-shadow: 0 0 15px rgba(255, 99, 71, 1), 0 0 25px rgba(255, 99, 71, 0.8);
+    box-shadow: 0 0 15px rgba(255, 99, 71, 1),
+                0 0 25px rgba(255, 99, 71, 0.8);
   }
   100% {
-    transform: scaleX(1);
-    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.7);
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8),
+                0 0 20px rgba(255, 99, 71, 0.7);
   }
 }
 
+/* ---------------- SOCIAL LINKS ---------------- */
+.social_links {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.social_links a {
+  height: 60px;
+  width: 60px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #222;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  will-change: transform, box-shadow;
+}
+
+.social_links i {
+  font-size: 30px;
+  color: #4d7177;
+  transition: transform 0.3s;
+}
+
+.social_links a:hover {
+  background: #ff6347;
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 99, 71, 1),
+              0 0 35px rgba(255, 99, 71, 0.7);
+}
+
+.social_links i:hover {
+  transform: scale(1.2);
+}
+
+/* ---------------- PROJECTS ---------------- */
 .projects-grid {
   display: flex;
   justify-content: center;
@@ -162,7 +177,9 @@ section {
   padding: 60px 0;
 }
 
-.crateninja, .flaptofreedom, .skyblaster {
+.crateninja,
+.flaptofreedom,
+.skyblaster {
   flex: 0 0 auto;
   max-width: 320px;
   border-radius: 15px;
@@ -171,26 +188,33 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
+  will-change: transform, box-shadow;
 }
 
-.crateninja:hover, .flaptofreedom:hover, .skyblaster:hover {
+.crateninja:hover,
+.flaptofreedom:hover,
+.skyblaster:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 99, 71, 1), 0 0 35px rgba(255, 99, 71, 0.7); /* Glowing effect */
+  box-shadow: 0 0 25px rgba(255, 99, 71, 1),
+              0 0 35px rgba(255, 99, 71, 0.7);
 }
 
-.crateninja h3, .flaptofreedom h3, .skyblaster h3 {
+.crateninja h3,
+.flaptofreedom h3,
+.skyblaster h3 {
   color: white;
   font-size: 24px;
   text-align: center;
   margin: 20px 0;
-  text-decoration: none; /* Ensures no underline for the titles */
+  text-decoration: none;
 }
 
-.crateninja a, .flaptofreedom a, .skyblaster a {
-  text-decoration: none; /* Ensures no underline for links */
+.crateninja a,
+.flaptofreedom a,
+.skyblaster a {
+  text-decoration: none;
 }
 
-/* Add image hover effect for projects */
 .crateninja img,
 .flaptofreedom img,
 .skyblaster img {
@@ -203,11 +227,12 @@ section {
 .crateninja:hover img,
 .flaptofreedom:hover img,
 .skyblaster:hover img {
-  transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0 0 15px rgba(255, 99, 71, 1), 0 0 20px rgba(255, 99, 71, 0.8); /* Glowing effect */
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 99, 71, 1),
+              0 0 20px rgba(255, 99, 71, 0.8);
 }
 
-/* --- Updated Contact Form Styles --- */
+/* ---------------- CONTACT FORM ---------------- */
 form {
   max-width: 600px;
   margin: 50px auto;
@@ -219,14 +244,7 @@ form {
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-form h3 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #ff6347;
-}
-
-input, 
+input,
 textarea {
   width: 100%;
   padding: 14px;
@@ -238,12 +256,7 @@ textarea {
   transition: all 0.3s;
 }
 
-input::placeholder, 
-textarea::placeholder {
-  color: #ccc;
-}
-
-input:focus, 
+input:focus,
 textarea:focus {
   outline: none;
   border-color: #ff6347;
@@ -266,40 +279,61 @@ button:hover {
   background: #e5533c;
 }
 
+button:focus-visible {
+  outline: 2px solid #ff6347;
+  outline-offset: 4px;
+}
+
+/* ---------------- FOOTER ---------------- */
+.trademark {
+  text-align: right;
+  padding: 10px 20px;
+  font-size: 8px;
+  font-family: "Roboto", sans-serif;
+  color: #888;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
     margin-top: 30px;
   }
+
   h2 {
     font-size: 32px;
     margin-top: 50px;
   }
+
   .navbar ul {
     flex-direction: column;
-    text-align: center;
   }
+
   .projects-grid {
     flex-direction: column;
   }
-  .crateninja, .flaptofreedom, .skyblaster {
+
+  .crateninja,
+  .flaptofreedom,
+  .skyblaster {
     max-width: 90%;
     margin: auto;
   }
+
   form {
     width: 90%;
   }
+
   button {
     width: 100%;
   }
-}
 
-.trademark {
-    text-align: right;
-    padding: 10px 20px;
-    font-size: 8px;
-    font-family: 'Roboto', sans-serif;
-    color: #888;
-    opacity: 0.7;
-    white-space: nowrap;
+  .social_links a:hover,
+  .crateninja:hover,
+  .flaptofreedom:hover,
+  .skyblaster:hover {
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.7);
+  }
 }
