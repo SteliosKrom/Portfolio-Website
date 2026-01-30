@@ -25,7 +25,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* ← adjust darkness here */
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
   z-index: -1;
   pointer-events: none;
 }
@@ -33,26 +33,41 @@ body::before {
 /* ---------------- HEADINGS ---------------- */
 h1 {
   text-align: center;
-  font-size: 60px;
-  color: #ff6347;
+  font-size: clamp(36px, 5vw, 60px);
+  background: linear-gradient(90deg, #ff6347, #ff8c42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 50px;
-  font-weight: bold;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 h2 {
   text-align: center;
-  font-size: 44px;
+  font-size: clamp(28px, 4vw, 44px);
   color: white;
   margin-top: 80px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+/* ---------------- SUBTITLE ---------------- */
+.subtitle {
+  text-align: center;
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: #f1f1f1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  font-weight: 500;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 /* ---------------- TEXT ---------------- */
 p {
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.8;
   color: #f1f1f1;
   max-width: 900px;
@@ -97,15 +112,16 @@ section {
   color: white;
   font-size: 20px;
   position: relative;
-  transition: all 0.4s ease;
-  will-change: transform, box-shadow;
+  transition: color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a:focus {
   color: #ff6347;
   text-shadow: 0 0 25px rgba(255, 99, 71, 0.9),
                0 0 35px rgba(255, 99, 71, 0.8);
   transform: scale(1.1);
+  outline: none;
 }
 
 /* Glowing underline */
@@ -121,7 +137,8 @@ section {
   transition: transform 0.3s ease;
 }
 
-.navbar a:hover::after {
+.navbar a:hover::after,
+.navbar a:focus::after {
   transform: scaleX(1);
   animation: pulse 1s infinite;
 }
@@ -158,25 +175,27 @@ section {
   text-decoration: none;
   background-color: #222;
   border-radius: 50%;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  will-change: transform, box-shadow;
 }
 
 .social_links i {
   font-size: 30px;
   color: #4d7177;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social_links a:hover {
+.social_links a:hover,
+.social_links a:focus {
   background: #ff6347;
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(255, 99, 71, 1),
               0 0 35px rgba(255, 99, 71, 0.7);
+  outline: none;
 }
 
-.social_links i:hover {
+.social_links i:hover,
+.social_links i:focus {
   transform: scale(1.2);
 }
 
@@ -200,14 +219,13 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
-  will-change: transform, box-shadow;
 }
 
 .crateninja:hover,
 .flaptofreedom:hover,
 .skyblaster:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 99, 71, 1),
+  box-shadow: 0 0 25px rgba(255, 99, 71, 0.9),
               0 0 35px rgba(255, 99, 71, 0.7);
 }
 
@@ -218,7 +236,6 @@ section {
   font-size: 24px;
   text-align: center;
   margin: 20px 0;
-  text-decoration: none;
 }
 
 .crateninja a,
@@ -240,8 +257,8 @@ section {
 .flaptofreedom:hover img,
 .skyblaster:hover img {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 99, 71, 1),
-              0 0 20px rgba(255, 99, 71, 0.8);
+  box-shadow: 0 0 15px rgba(255, 99, 71, 0.9),
+              0 0 20px rgba(255, 99, 71, 0.7);
 }
 
 /* ---------------- CONTACT FORM ---------------- */
@@ -265,7 +282,7 @@ textarea {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  transition: all 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input:focus,
@@ -283,7 +300,7 @@ button {
   font-size: 18px;
   cursor: pointer;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: background 0.3s ease;
   margin-top: 20px;
 }
 
@@ -310,12 +327,12 @@ button:focus-visible {
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 768px) {
   h1 {
-    font-size: 40px;
+    font-size: clamp(32px, 8vw, 40px);
     margin-top: 30px;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: clamp(26px, 6vw, 32px);
     margin-top: 50px;
   }
 
@@ -358,11 +375,11 @@ button:focus-visible {
 }
 
 .about-selfie img {
-    width: 400px;       /* professional display size on desktop */
-    max-width: 80%;     /* responsive, never overflows */
-    height: auto;       /* maintain aspect ratio */
-    border-radius: 8px; /* slightly rounded corners for polish */
-    border: 2px solid #ff6347; /* subtle theme frame */
+    width: 400px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #ff6347;
     box-shadow: 0 0 25px rgba(255, 99, 71, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -372,9 +389,8 @@ button:focus-visible {
     box-shadow: 0 0 35px rgba(255, 99, 71, 0.7);
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
     .about-selfie img {
-        width: 280px;   /* smaller on phones */
+        width: 280px;
     }
 }
