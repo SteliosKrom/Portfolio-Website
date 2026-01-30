@@ -349,3 +349,32 @@ button:focus-visible {
     box-shadow: 0 0 15px rgba(255, 99, 71, 0.7);
   }
 }
+
+/* ---------------- ABOUT SELFIE (Professional Rectangular) ---------------- */
+.about-selfie {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.about-selfie img {
+    width: 400px;       /* professional display size on desktop */
+    max-width: 80%;     /* responsive, never overflows */
+    height: auto;       /* maintain aspect ratio */
+    border-radius: 8px; /* slightly rounded corners for polish */
+    border: 2px solid #ff6347; /* subtle theme frame */
+    box-shadow: 0 0 25px rgba(255, 99, 71, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-selfie img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(255, 99, 71, 0.7);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .about-selfie img {
+        width: 280px;   /* smaller on phones */
+    }
+}
